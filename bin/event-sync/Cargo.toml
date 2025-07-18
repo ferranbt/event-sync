@@ -1,0 +1,22 @@
+[package]
+name = "event-sync"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "event-sync"
+path = "src/main.rs"
+
+[dependencies]
+indexer.workspace = true
+storage.workspace = true
+storage-sqlite.workspace = true
+storage-postgresql.workspace = true
+
+alloy-primitives.workspace = true
+
+tracing-subscriber.workspace = true
+eyre.workspace = true
+tokio.workspace = true
+
+clap = { version = "4.5.16", features = ["derive"] }

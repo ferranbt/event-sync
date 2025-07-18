@@ -1,0 +1,50 @@
+[workspace]
+resolver = "3"
+
+members = [
+    "crates/indexer",
+    "bin/event-sync",
+    "bin/storage-bench",
+    "crates/storage",
+    "crates/storage-sqlite",
+    "crates/storage-postgresql",
+]
+
+[workspace.dependencies]
+indexer = { path = "crates/indexer" }
+storage = { path = "crates/storage" }
+storage-sqlite = { path = "crates/storage-sqlite" }
+storage-postgresql = { path = "crates/storage-postgresql" }
+storage-collection = { path = "crates/storage-collection" }
+
+arbitrary = "1"
+
+alloy-primitives = { version = "1.2.1", features = ["getrandom"] }
+alloy-json-abi = "1.2.1"
+alloy-dyn-abi = "1.2.1"
+alloy = { git = "https://github.com/alloy-rs/alloy", version = "1.0.12", features = [
+    "network",
+    "providers",
+    "provider-http",
+    "dyn-abi",
+    "rpc-types-eth",
+    "provider-http",
+] }
+
+tracing-subscriber = "0.3"
+tracing = "0.1"
+
+tokio = { version = "1", features = [
+    "rt-multi-thread",
+    "macros",
+    "signal",
+    "sync",
+] }
+eyre = "0.6.12"
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+async-trait = "0.1"
+serde_json = "1.0"
+futures = "0.3"
+url = "2.5"

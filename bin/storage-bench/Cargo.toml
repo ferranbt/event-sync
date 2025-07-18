@@ -1,0 +1,22 @@
+[package]
+edition = "2024"
+name = "storage-bench"
+version = "0.1.0"
+
+[dependencies]
+storage.workspace = true
+storage-sqlite.workspace = true
+eyre.workspace = true
+tokio.workspace = true
+serde_json.workspace = true
+serde.workspace = true
+alloy-dyn-abi.workspace = true
+alloy-primitives.workspace = true
+chrono.workspace = true
+arbitrary.workspace = true
+
+getrandom = "0.2"
+
+[[bin]]
+name = "storage-bench"
+path = "src/main.rs"

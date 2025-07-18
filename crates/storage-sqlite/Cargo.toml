@@ -1,0 +1,18 @@
+[package]
+name = "storage-sqlite"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+storage.workspace = true
+serde.workspace = true
+chrono.workspace = true
+thiserror.workspace = true
+async-trait.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+futures.workspace = true
+alloy-primitives.workspace = true
+alloy-dyn-abi.workspace = true
+
+rusqlite = { version = "0.28", features = ["bundled"] }

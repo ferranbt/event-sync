@@ -1,0 +1,45 @@
+[package]
+name = "indexer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+storage.workspace = true
+
+eyre.workspace = true
+tokio.workspace = true
+serde.workspace = true
+chrono.workspace = true
+thiserror.workspace = true
+async-trait.workspace = true
+serde_json.workspace = true
+futures.workspace = true
+url.workspace = true
+tracing.workspace = true
+alloy-json-abi.workspace = true
+alloy.workspace = true
+
+alloy-primitives.workspace = true
+
+bincode = "1.3.3"
+foundry-block-explorers = "0.18.0"
+
+once_cell = "1.19.0"
+
+reqwest = { version = "0.12", features = ["blocking"] }
+
+# async
+
+# misc
+async-stream = "0.3"
+lru = "0.12"
+futures-util = "0.3.30"
+
+rusqlite = { version = "0.28", features = ["bundled"] }
+
+deadpool-postgres = "0.10"
+tokio-postgres = "0.7"
+
+deadpool = "0.9"
+
+clickhouse = { version = "0.13.2", features = ["inserter"] }
